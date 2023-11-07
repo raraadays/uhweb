@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH WEB</title>
+</head>
+<body>
+    <h3>Menghitung Luas Segitiga</h3>
+    <label for="alas">Masukkan panjang alas :</label>
+    <input type="number" id="alas" name="alas">
+    <br><br>
+    <label for="tinggi">Masukkan tinggi :</label>
+    <input type="number" id="tinggi" name="tinggi">
+    <br><br>
+    <button onclick="hitungLuas()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungLuas() {
+            var alas = parseFloat(document.getElementById("alas").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+
+            var luas = 0.5 * alas * tinggi;
+
+            document.getElementById("hasil").textContent = "Luas segitiga adalah " + luas + " cm.";
+        }
+    </script>
+</body>
+</html>

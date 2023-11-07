@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH WEB</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Mengevaluasi score</h3>
+        <label for="nilai">Nilai :</label>
+        <input type="text" id="inputText" name="inputText"><br><br>
+        <button onclick="cekTeks()">Cek</button>
+        <p id="hasil"></p>
+
+        <script>
+            function cekTeks() {
+                var teks = document.getElementById("inputText").value;
+
+                if (teks >= 90) {
+                    document.getElementById("hasil").textContent = "Selamat! Anda mendapatkan nilai A."
+                } else if (teks >= 80 && teks <= 89) {
+                    document.getElementById("hasil").textContent = "Anda mendapatkan nilai B."
+                } else if (teks >= 70 && teks <= 79) {
+                    document.getElementById("hasil").textContent = "Anda mendapatkan nilai C."
+                } else if (teks >= 60 && teks <= 69) {
+                    document.getElementById("hasil").textContent = "Anda mendapatkan nilai D."
+                } else if (teks <= 60) {
+                    document.getElementById("hasil").textContent = "Anda mendapatkan nilai E."
+                } else {
+                    document.getElementById("hasil").textContent = "Konten yang Anda masukkan tidak valid."
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

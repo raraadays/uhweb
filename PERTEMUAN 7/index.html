@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UH WEB</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="color: white; font-size: 20px">ULANGAN HARIAN WEB</p>
+
+      <div class="item" onclick="pindahSoal(1)">
+        <a href="soal1.html"> SOAL 1 </a>
+      </div>
+
+      <div class="item" onclick="pindahSoal(3)">
+        <a href="soal3.html"> SOAL 3 </a>
+      </div>
+
+      <div class="item" onclick="pindahSoal(4)">
+        <a href="soal4.html"> SOAL 4 </a>
+      </div>
+
+      <div class="item" onclick="pindahSoal(6)">
+        <a href="soal6.html"> SOAL 6 </a>
+      </div>
+
+      <div class="item" onclick="pindahSoal(8)">
+        <a href="soal8.html"> SOAL 8 </a>
+      </div>
+    </div>
+
+    <script>
+      function pindahSoal(nomor) {
+        window.location.href = 'soal' + nomor + '.html';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH WEB</title>
+</head>
+<body>
+    <h3>Pengecekan Bilangan Positif/Negatif</h3>
+    <label for="bilangan">Masukkan bilangan :</label>
+    <input type="number" id="bilangan" name="bilangan">
+    <br><br>
+    <button onclick="cekBilangan()">Cek</button>
+    <p id="hasil"></p>
+
+    <script>
+        function cekBilangan() {
+            var bilangan = parseFloat(document.getElementById("bilangan").value);
+
+            if (bilangan > 0) {
+                document.getElementById("hasil").textContent = "Bilangan ini adalah bilangan positif.";
+            } else if (bilangan < 0) {
+                document.getElementById("hasil").textContent = "Bilangan ini adalah bilangan negatif.";
+            } else {
+                document.getElementById("hasil").textContent = "Bilangan ini adalah nol.";
+            }
+        }
+    </script>
+</body>
+</html>

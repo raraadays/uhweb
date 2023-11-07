@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.container {
+    background-color: rgb(157, 175, 199); /* mewarnai bg */
+    display: flex; /* agar element di dalamnya dapat diatur secara fleksibel */
+    flex-direction: column; /* agar element di dalamnya secara otomatis berbentuk kolom */
+    align-items: center; /* agar element menjadi rata tengah */
+    gap: 20px; /* agar setiap element memiliki jarak 20px */
+    border-radius: 6px; /* agar membentuk sudut pada element ini */
+    padding: 1rem; /* memberi batas jarak dalam antara konten */
+}
+
+.item {
+    background-color: rgb(113, 139, 168);
+    /* memberikan jarak padding 1rem untuk top dan bottom, 10 rem */
+    padding: 1rem 10rem; /* 1rem = 16px */
+    width: 100%;
+    text-align: center;
+    /* memberikan icon jari telunjuk ketika kursor */
+    cursor: pointer;
+    /* memberikan transisi agar */
+    transition: all 0.3 ease;
+}
+
+.item:hover {
+    background-color: rgb(51, 62, 77);
+    /* memberikan efek transformasi */
+    transform: translateY(-2px);
+}
+
+.item a {
+    /* untuk menghilangkan garis bawah */
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+    
+    .item {
+        padding: 1rem 3rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
